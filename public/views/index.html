@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Your quick-fix for roster information.">
+    <meta name="author" content="gifford/likhovid">
+    <link rel="icon" href="public/images/football_icon.ico">
+
+    <title>Roster Retriever</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="public/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="public/css/jumbotron-narrow.css" rel="stylesheet">
+    <script src="public/scripts/ie-emulation-modes-warning.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="index.html">Home</a></li>
+            <li role="presentation"><a href="public/about.html">About</a></li>
+            <li role="presentation"><a href="public/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <img src="public/images/football-clip-art.png" alt="football clip art" width="80" height="60"/><h3 class="text-muted"></h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Roster Retriever</h1>
+        <p class="lead">Your quick fix for Roster Information!</p>
+        <form action="/" method="post">
+        <center><input id="searchbar2345" name="searchbar" placeholder="E.G. 'Starting QB for Green Bay'" autocomplete="off"></center>
+        <section class="in-b"><button class="btn btn-lg btn-success"type >Search!</button></section>
+        </form>
+        <div class="result-text">
+           <div id="hideME">
+              <p> <%= AaronRodgers %> </p>
+          </div>
+        </div>
+        <p id="probowl"> * signifies the searched player was invited to the ProBowl </p>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2016 RR Comp-324</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    </script>
+    <script type="text/javascript">
+     function change_color() {
+       var e = document.getElementById("result-text");
+          $(e).css({"box-shadow": "0px 0px 0px 2px rgba(0,0,0,0.6) 0px 0px 0px 14px #red 0px 0px 0px 18px rgba(0,0,0,0.2) 6px 6px 8px 17px #555"})
+    }
+  </script>
+    <script type="text/javascript">
+    function check_empty() {
+       var e = document.getElementById("searchbar2345");
+       if(e.value == ""){
+          change_color();
+       }
+    
+    }
+  
+  <!--<script type="text/javascript" src="public/scripts/search_handler.js"></script>-->
+  </body>
+</html>
